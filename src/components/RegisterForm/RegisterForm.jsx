@@ -60,6 +60,7 @@ const RegisterFormComponent = (props) => {
 const PersonalInformation = (props) => {
     return <div className='login-box'>
             <img src={logo} className='login-box-logo' />
+            <span className='summary-text'>Personal information</span>
             <input type='text' placeholder='Full name' className='login-box-input' value={props.fullName} onChange={(ev) => props.setFullName(ev.target.value)}/>
             <input type='text' placeholder='Address' className='login-box-input' value={props.address} onChange={(ev) => props.setAddress(ev.target.value)}/>
             <input type='date' placeholder='Date of birth' className='login-box-input' value={props.dob} onChange={(ev) => props.setDob(ev.target.value)}/>
@@ -77,6 +78,7 @@ const PersonalInformation = (props) => {
 const UserInformation = (props) => {
     return <div className='login-box'>
             <img src={logo} className='login-box-logo' />
+            <span className='summary-text'>User information</span>
             <input type='email' placeholder='E-mail' className='login-box-input' value={props.email} onChange={(ev) => props.setEmail(ev.target.value)}/>
             <input type='password' placeholder='Password' className='login-box-input' value={props.password} onChange={(ev) => props.setPassword(ev.target.value)}/>
             <input type='password' placeholder='Verify password' className='login-box-input' value={props.passwordVerify} onChange={(ev) => props.setPasswordVerify(ev.target.value)}/>
