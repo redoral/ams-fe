@@ -63,9 +63,9 @@ const PersonalInformation = (props) => {
             <span className='summary-text'>Personal information</span>
             <input type='text' placeholder='Full name' className='login-box-input' value={props.fullName} onChange={(ev) => props.setFullName(ev.target.value)}/>
             <input type='text' placeholder='Address' className='login-box-input' value={props.address} onChange={(ev) => props.setAddress(ev.target.value)}/>
-            <input type='date' placeholder='Date of birth' className='login-box-input' value={props.dob} onChange={(ev) => props.setDob(ev.target.value)}/>
             <input type='number' max='4' placeholder='Last four of SSN' value={props.ssn} className='login-box-input' onChange={(ev) => {if(ev.target.value.length <= 4){props.setSsn(ev.target.value)}}}/>
-            
+            <input type='date' placeholder='Date of birth' className='login-box-input' value={props.dob} onChange={(ev) => props.setDob(ev.target.value)}/>
+            <span style={{color: '#999', fontWeight: 500, fontSize: 14, marginTop: 10}}>(Last field is date of birth)</span>
             {(props.fullName && props.address && props.dob && props.ssn) ? 
             <span className='login-submit-button' onClick={() => props.setCurrentPage('userInformation')}>Next</span>
             :
