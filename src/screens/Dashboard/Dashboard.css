@@ -39,9 +39,11 @@
     transition: color 0.5s ease;
 }
 
-.nav-item:hover {
-    color: #96C7C1;
+.nav-item:hover,
+.nav-item-active {
+    color: #89B5AF;
 }
+
 
 .nav-icon {
     margin-right: 20px;

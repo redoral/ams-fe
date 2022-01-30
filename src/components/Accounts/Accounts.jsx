@@ -1,16 +1,17 @@
+import axios from 'axios';
 import React from 'react';
 
 const AccountsComponent = (props) => {
-    
-
     const fakeData = [{
         account_number: 12345,
-        current_balance: 6969.00,
+        current_balance: 3245.91,
+        type: 'Checking',
         customer_id: 1
     },
     {
         account_number: 54321,
-        current_balance: 6969.00,
+        current_balance: 6969.69,
+        type: 'Savings',
         customer_id: 1
     }];
 
@@ -19,6 +20,7 @@ const AccountsComponent = (props) => {
         {fakeData.map(account => {
             return <div className='account-item'>
                 <span className='account-num-text'>xxxxxx{account.account_number}</span>
+                <span className='balance-text'>{account.type}</span>
                 <span className='balance-text'>${account.current_balance} current balance</span>
 
             </div>
