@@ -1,0 +1,74 @@
+.dashboard-container {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.dashboard-sidebar {
+    flex: 1;
+    height: 100%;
+    padding: 50px;
+}
+
+.dashboard-main-page {
+    flex: 5;
+    padding: 50px;   
+    background-color: #fff;
+}
+
+.sidebar-logo{
+    height: 50px;
+}
+
+.sidebar-greeting {
+    color: #555;
+    font-size: 25px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    color: #555;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.nav-item:hover {
+    color: #96C7C1;
+}
+
+.nav-icon {
+    margin-right: 20px;
+}
+
+.main-page-header {
+    color: #555;
+    font-size: 36px;
+}
+
+.account-item {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #efefef;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.account-num-text {
+    color: #555;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.balance-text {
+    color: #999;
+    font-weight: 700;
+    font-size: 18px;
+}
