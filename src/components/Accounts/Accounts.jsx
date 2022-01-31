@@ -1,42 +1,41 @@
 import React from 'react';
-import { loginUser } from '../../redux/actions/UserActions';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { getAccounts } from '../../redux/actions/AccountActions';
 
 const AccountsComponent = (props) => {
+	const dispatch = useDispatch();
+
 	React.useEffect(() => {
-		loginUser(3);
+		dispatch(
+			getAccounts(
+				JSON.parse(sessionStorage.getItem('user')).customer.customer_id
+			)
+		);
 	}, []);
 
-	const fakeData = [
-		{
-			account_number: 12345,
-			current_balance: 3245.91,
-			type: 'Checking',
-			customer_id: 1,
-		},
-		{
-			account_number: 54321,
-			current_balance: 6969.69,
-			type: 'Savings',
-			customer_id: 1,
-		},
-	];
-
+	const data = useSelector((state) => state.accounts);
 	return (
 		<div className='accounts-container'>
-			<h1 className='main-page-header'>Accounts</h1>
-			{fakeData.map((account) => {
-				return (
-					<div className='account-item'>
-						<span className='account-num-text'>
-							xxxxxx{account.account_number}
-						</span>
-						<span className='balance-text'>{account.type}</span>
-						<span className='balance-text'>
-							${account.current_balance} current balance
-						</span>
-					</div>
-				);
-			})}
+			<div className='accounts-header'>
+				<h1 className='main-page-header'>Accounts</h1>
+				<span className='open-account-btn'>Open a new account</span>
+			</div>
+			{data
+				? data.map((account) => {
+						return (
+							<div className='account-item' key={account.account_number}>
+								<span className='account-num-text'>
+									{account.account_number}
+								</span>
+								<span className='balance-text'>{account.account_type}</span>
+								<span className='balance-text'>
+									${account.current_balance} current balance
+								</span>
+							</div>
+						);
+				  })
+				: ''}
 		</div>
 	);
 };

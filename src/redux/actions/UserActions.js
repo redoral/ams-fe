@@ -10,7 +10,7 @@ export const loginUser = (username, password) => async (dispatch) => {
 		if (res.data.user_id) {
 			sessionStorage.setItem('user', JSON.stringify(res.data));
 			dispatch({
-				type: 'LOGIN_USER',
+				type: 'UPDATE_USER',
 				payload: res.data,
 			});
 			window.location.reload();
@@ -24,7 +24,7 @@ export const logOutUser = () => async (dispatch) => {
 	try {
 		sessionStorage.clear();
 		dispatch({
-			type: 'LOGOUT_USER',
+			type: 'UPDATE_USER',
 			payload: {},
 		});
 		window.location.reload();
