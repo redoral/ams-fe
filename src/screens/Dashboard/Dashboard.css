@@ -1,76 +1,93 @@
 .dashboard-container {
-    display: flex;
-    overflow: hidden;
-    height: 100vh;
+	display: flex;
+	overflow: hidden;
+	height: 100vh;
 }
 
 .dashboard-sidebar {
-    flex: 1;
-    height: 100%;
-    padding: 50px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 50px;
+}
+
+.dashboard-top {
+	flex: 8;
+}
+
+.dashboard-bottom {
+	flex: 1;
 }
 
 .dashboard-main-page {
-    flex: 5;
-    padding: 50px;   
-    background-color: #fff;
+	flex: 5;
+	padding: 50px;
+	background-color: #fff;
 }
 
-.sidebar-logo{
-    height: 50px;
+.sidebar-logo {
+	height: 50px;
 }
 
 .sidebar-greeting {
-    color: #555;
-    font-size: 25px;
+	color: #555;
+	font-size: 25px;
 }
 
 .sidebar-nav {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .nav-item {
-    color: #555;
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 25px;
-    cursor: pointer;
-    transition: color 0.5s ease;
+	color: #555;
+	font-weight: 700;
+	font-size: 18px;
+	margin-top: 25px;
+	cursor: pointer;
+	transition: color 0.5s ease;
 }
 
 .nav-item:hover,
 .nav-item-active {
-    color: #89B5AF;
+	color: #89b5af;
 }
 
-
 .nav-icon {
-    margin-right: 20px;
+	margin-right: 20px;
 }
 
 .main-page-header {
-    color: #555;
-    font-size: 36px;
+	color: #555;
+	font-size: 36px;
 }
 
 .account-item {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    background-color: #efefef;
-    margin-top: 10px;
-    border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+	background-color: #efefef;
+	margin-top: 10px;
+	border-radius: 25px;
 }
 
 .account-num-text {
-    color: #555;
-    font-weight: 700;
-    font-size: 18px;
+	color: #555;
+	font-weight: 700;
+	font-size: 18px;
 }
 
 .balance-text {
-    color: #999;
-    font-weight: 700;
-    font-size: 18px;
+	color: #999;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.sign-out-btn {
+	font-weight: 700;
+	color: #555;
+	font-size: 18px;
+	cursor: pointer;
+	user-select: none;
 }
