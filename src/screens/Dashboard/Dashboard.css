@@ -112,3 +112,66 @@
 	cursor: pointer;
 	user-select: none;
 }
+
+.create-account-container {
+	display: flex;
+	float: right;
+	padding: 25px;
+	background-color: #efefef;
+	border-radius: 25px;
+	flex-direction: column;
+	margin-left: 25px;
+	margin-top: 5px;
+}
+
+.account-type-text {
+	color: #555;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.account-type-select {
+	width: 300px;
+	border: 0px;
+	padding: 10px;
+	border-radius: 25px;
+	margin-top: 10px;
+	font-weight: 700;
+	color: #555;
+}
+
+.account-type-select:focus {
+	outline: 0;
+}
+
+.create-account-btns {
+	display: flex;
+	margin-top: 75px;
+	justify-content: flex-end;
+	padding: 10px;
+}
+
+.open-btn {
+	background-color: #89b5af;
+	padding: 10px;
+	color: #fefefe;
+	font-weight: 700;
+	border-radius: 25px;
+	cursor: pointer;
+	width: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+}
+
+.cancel-btn {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	color: #999;
+	cursor: pointer;
+	user-select: none;
+}

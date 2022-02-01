@@ -25,7 +25,6 @@ export const openAccount = (account) => async (dispatch) => {
 			type: 'UPDATE_ACCOUNTS',
 			payload: res.data,
 		});
-		window.location.reload();
 	} catch (e) {
 		return e;
 	}
