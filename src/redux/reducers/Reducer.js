@@ -7,6 +7,9 @@ const Reducer = (state, action) => {
 		case 'UPDATE_ACCOUNTS':
 			newState.accounts = action.payload;
 			return newState;
+		case 'UPDATE_TRANSACTIONS':
+			newState.transactions = action.payload;
+			return newState;
 		default:
 			return newState;
 	}

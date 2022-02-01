@@ -11,6 +11,7 @@ import {
 import AccountsComponent from '../../components/Accounts/Accounts';
 import { useDispatch } from 'react-redux';
 import { logOutUser } from '../../redux/actions/UserActions';
+import DashboardMainPageComponent from '../../components/DashboardMainPage/DashboardMainPage';
 
 const DashboardScreen = () => {
 	const [nav, setNav] = React.useState('accounts');
@@ -24,9 +25,9 @@ const DashboardScreen = () => {
 				<div className='dashboard-top'>
 					<img src={logo} className='sidebar-logo' />
 					<h1 className='sidebar-greeting'>
-						Good morning,
+						Hello,
 						<br />
-						{currentUser.customer.name} 🌞
+						{currentUser.customer.name} 👋
 					</h1>
 					<div className='sidebar-nav'>
 						<span
@@ -45,22 +46,6 @@ const DashboardScreen = () => {
 							<FaRegUser className='nav-icon' />
 							Accounts
 						</span>
-						<span
-							className={
-								nav === 'transactions' ? 'nav-item-active nav-item' : 'nav-item'
-							}
-						>
-							<FaCcVisa className='nav-icon' />
-							Transactions
-						</span>
-						<span
-							className={
-								nav === 'settings' ? 'nav-item-active nav-item' : 'nav-item'
-							}
-						>
-							<FaCog className='nav-icon' />
-							Settings
-						</span>
 					</div>
 				</div>
 				<div className='dashboard-bottom'>
@@ -74,7 +59,7 @@ const DashboardScreen = () => {
 				</div>
 			</div>
 			<div className='dashboard-main-page'>
-				<AccountsComponent />
+				<DashboardMainPageComponent nav={nav} setNav={setNav} />
 			</div>
 		</div>
 	);

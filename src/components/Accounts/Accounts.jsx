@@ -20,7 +20,7 @@ const AccountsComponent = (props) => {
 	return (
 		<div className='accounts-container'>
 			<div className='accounts-header'>
-				<h1 className='main-page-header'>Accounts</h1>
+				<h1 className='main-page-header'>Your accounts</h1>
 				<span className='open-account-btn' onClick={() => setDisplay('flex')}>
 					Open a new account
 				</span>
@@ -29,13 +29,20 @@ const AccountsComponent = (props) => {
 			{data
 				? data.map((account) => {
 						return (
-							<div className='account-item' key={account.account_number}>
+							<div
+								className='account-item'
+								key={account.account_number}
+								onClick={() => {
+									props.setNav('viewAccount');
+									props.setAccount(account);
+								}}
+							>
 								<span className='account-num-text'>
 									{account.account_number}
 								</span>
 								<span className='balance-text'>{account.account_type}</span>
 								<span className='balance-text'>
-									${account.current_balance} current balance
+									${account.current_balance.toFixed(2)} current balance
 								</span>
 							</div>
 						);

@@ -61,6 +61,16 @@
 .main-page-header {
 	color: #555;
 	font-size: 36px;
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+
+.main-page-subheader {
+	color: #999;
+	font-size: 36px;
+	margin: 0;
+	padding: 0;
 }
 
 .account-item {
@@ -70,12 +80,19 @@
 	background-color: #efefef;
 	margin-top: 10px;
 	border-radius: 25px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.account-item:hover {
+	background-color: #e0e0e0;
 }
 
 .accounts-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 50px;
 }
 
 .open-account-btn {
@@ -119,8 +136,6 @@
 	background-color: #efefef;
 	border-radius: 25px;
 	flex-direction: column;
-	margin-left: 25px;
-	margin-top: 5px;
 }
 
 .account-type-text {
@@ -173,4 +188,62 @@
 	color: #999;
 	cursor: pointer;
 	user-select: none;
+}
+
+.accounts-actions-container {
+	display: flex;
+	flex: 1;
+	height: 100%;
+}
+
+.go-back-btn {
+	font-weight: 700;
+	color: #999;
+	cursor: pointer;
+}
+
+.accounts-container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.account-view-body {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+
+.actions-container {
+	display: flex;
+	flex-direction: column;
+	flex: 0.4;
+	padding: 25px;
+	margin-top: 5px;
+}
+
+.recent-transactions {
+	flex: 1;
+}
+
+.action-box {
+	background-color: #efefef;
+	border-radius: 25px;
+	display: flex;
+	height: 200px;
+}
+
+.recent-transactions-text {
+	color: #555;
+	margin-top: 50px;
+}
+
+.recent-transactions-box {
+	background-color: #efefef;
+	height: 475px;
+	border-radius: 25px;
+}
+
+.quick-actions-text {
+	color: #555;
 }
