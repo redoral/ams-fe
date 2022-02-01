@@ -114,7 +114,6 @@
 }
 
 .create-account-container {
-	display: flex;
 	float: right;
 	padding: 25px;
 	background-color: #efefef;

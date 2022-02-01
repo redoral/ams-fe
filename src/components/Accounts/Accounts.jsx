@@ -5,7 +5,7 @@ import { getAccounts } from '../../redux/actions/AccountActions';
 import CreateAccountComponent from './CreateAccount';
 
 const AccountsComponent = (props) => {
-	const [display, setDisplay] = React.useState('flex');
+	const [display, setDisplay] = React.useState('none');
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
