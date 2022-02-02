@@ -131,10 +131,11 @@
 }
 
 .create-account-container {
-	float: right;
+	align-self: flex-end;
 	padding: 25px;
 	background-color: #efefef;
 	border-radius: 25px;
+	width: 350px;
 	flex-direction: column;
 }
 
@@ -145,7 +146,6 @@
 }
 
 .account-type-select {
-	width: 300px;
 	border: 0px;
 	padding: 10px;
 	border-radius: 25px;
@@ -160,7 +160,7 @@
 
 .create-account-btns {
 	display: flex;
-	margin-top: 75px;
+	margin-top: 25px;
 	justify-content: flex-end;
 	padding: 10px;
 }
@@ -230,7 +230,22 @@
 	background-color: #efefef;
 	border-radius: 25px;
 	display: flex;
-	height: 200px;
+	flex-direction: column;
+	padding: 25px;
+	min-height: 200px;
+}
+
+.balance-input {
+	border: 0;
+	padding: 15px;
+	border-radius: 25px;
+	margin-bottom: 10px;
+	font-weight: 700;
+	color: #555;
+}
+
+.balance-input::placeholder {
+	color: #999;
 }
 
 .recent-transactions-text {
@@ -240,10 +255,33 @@
 
 .recent-transactions-box {
 	background-color: #efefef;
-	height: 475px;
 	border-radius: 25px;
+}
+
+.transaction-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 25px;
+	border-bottom: 1px solid #fff;
+}
+
+.transaction-balance-text {
+	font-weight: 700;
+	font-size: 22px;
+	color: #555;
 }
 
 .quick-actions-text {
 	color: #555;
+}
+
+.transaction-type-text,
+.transaction-balance-text {
+	padding: 0;
+	margin: 10px;
+}
+
+.transaction-type-text {
+	font-weight: 700;
+	color: #999;
 }
