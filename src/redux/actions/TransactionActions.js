@@ -6,9 +6,9 @@ export const createTransaction = (transaction) => async (dispatch) => {
 		transaction
 	);
 	const transactionRes = await axios.get(
-		`http://localhost:8080/api/v1/transactions/account/${transaction.account.account_number}`
+		`http://localhost:8080/api/v1/transactions/account/${transaction.account.account_number}/5`
 	);
-	const accountRes = await axios.get('http://localhost:8080/api/v1/accounts');
+	const accountRes = await axios.get('http://localhost:8080/api/v1/accounts/');
 
 	dispatch({
 		type: 'UPDATE_TRANSACTIONS',
@@ -25,7 +25,7 @@ export const createTransaction = (transaction) => async (dispatch) => {
 
 export const getTransactions = (accountId) => async (dispatch) => {
 	const res = await axios.get(
-		`http://localhost:8080/api/v1/transactions/account/${accountId}`
+		`http://localhost:8080/api/v1/transactions/account/${accountId}/5`
 	);
 	dispatch({
 		type: 'UPDATE_TRANSACTIONS',

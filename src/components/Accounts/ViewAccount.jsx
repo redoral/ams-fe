@@ -64,9 +64,7 @@ const ViewAccountComponent = (props) => {
 											</div>
 											<div>
 												<p className='transaction-date-text'>
-													{new Date(
-														parseInt(transaction.transaction_date)
-													).toDateString()}
+													{transaction.transaction_date.substring(0, 10)}
 												</p>
 											</div>
 										</div>
