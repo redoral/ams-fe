@@ -64,7 +64,9 @@ const ViewAccountComponent = (props) => {
 											</div>
 											<div>
 												<p className='transaction-date-text'>
-													{transaction.transaction_date}
+													{new Date(
+														parseInt(transaction.transaction_date)
+													).toDateString()}
 												</p>
 											</div>
 										</div>
@@ -99,9 +101,7 @@ const ViewAccountComponent = (props) => {
 								onClick={() =>
 									dispatch(
 										createTransaction({
-											transaction_date: new Date(Date.now())
-												.toISOString()
-												.slice(0, 10),
+											transaction_date: Date.now(),
 											transaction_type: transactionType,
 											transaction_sub_type: 'Debit',
 											current_balance: balance,
