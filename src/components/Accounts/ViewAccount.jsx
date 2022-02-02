@@ -101,7 +101,7 @@ const ViewAccountComponent = (props) => {
 								onClick={() =>
 									dispatch(
 										createTransaction({
-											transaction_date: Date.now(),
+											transaction_date: new Date(Date.now()).toISOString(),
 											transaction_type: transactionType,
 											transaction_sub_type: 'Debit',
 											current_balance: balance,
