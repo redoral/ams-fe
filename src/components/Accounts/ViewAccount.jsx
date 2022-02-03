@@ -5,10 +5,15 @@ import {
 	createTransaction,
 	getTransactions,
 } from '../../redux/actions/TransactionActions';
+import { CSVLink } from 'react-csv';
+import axios from 'axios';
 
 const ViewAccountComponent = (props) => {
 	const [balance, setBalance] = React.useState();
 	const [transactionType, setTransactionType] = React.useState('Deposit');
+	const [fromDate, setFromDate] = React.useState();
+	const [toDate, setToDate] = React.useState();
+	const [csvData, setCsvData] = React.useState([{}]);
 
 	const dispatch = useDispatch();
 
@@ -17,8 +22,6 @@ const ViewAccountComponent = (props) => {
 	}, []);
 
 	const transactions = useSelector((state) => state.transactions);
-
-	console.log(transactions);
 
 	return (
 		<div className='accounts-actions-container'>
@@ -114,7 +117,39 @@ const ViewAccountComponent = (props) => {
 							</span>
 						</div>
 						<h2 className='quick-actions-text'>Download transactions</h2>
-						<div className='action-box'></div>
+						<div className='action-box'>
+							<span className='input-label'>From</span>
+							<input
+								type='date'
+								className='balance-input'
+								onChange={(ev) => setFromDate(ev.target.value)}
+							/>
+							<span className='input-label'>To</span>
+							<input
+								type='date'
+								className='balance-input'
+								onChange={(ev) => setToDate(ev.target.value)}
+							/>
+							<CSVLink
+								className='open-btn csv-download-btn'
+								style={{ alignSelf: 'flex-end' }}
+								data={csvData}
+								asyncOnClick={true}
+								onClick={() => {
+									axios
+										.get(
+											`http://localhost:8080/api/v1/transactions/account/${
+												props.account.account_number
+											}/${new Date(fromDate).toISOString()}/${new Date(
+												toDate
+											).toISOString()}`
+										)
+										.then((res) => setCsvData(res.data));
+								}}
+							>
+								Download
+							</CSVLink>
+						</div>
 					</div>
 				</div>
 			</div>
