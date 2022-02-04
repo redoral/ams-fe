@@ -1,14 +1,7 @@
 import React from 'react';
 import './Dashboard.css';
 import logo from '../../assets/logo.png';
-import {
-	FaCompass,
-	FaRegUser,
-	FaCcVisa,
-	FaCog,
-	FaDoorOpen,
-} from 'react-icons/fa';
-import AccountsComponent from '../../components/Accounts/Accounts';
+import { FaCompass, FaRegUser, FaDoorOpen } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { logOutUser } from '../../redux/actions/UserActions';
 import DashboardMainPageComponent from '../../components/DashboardMainPage/DashboardMainPage';

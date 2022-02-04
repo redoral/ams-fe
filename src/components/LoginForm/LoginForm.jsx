@@ -2,8 +2,9 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import logo from '../../assets/logo.png';
 import { loginUser } from '../../redux/actions/UserActions';
+import './LoginForm.css';
 
-const LoginFormComponent = (props) => {
+const LoginFormComponent = () => {
 	const [username, setUsername] = React.useState();
 	const [password, setPassword] = React.useState();
 
@@ -34,12 +35,6 @@ const LoginFormComponent = (props) => {
 			>
 				Sign in
 			</span>
-			<p
-				className='sign-up-text'
-				onClick={() => props.setCurrentView('register')}
-			>
-				No account? Sign up
-			</p>
 		</div>
 	);
 };

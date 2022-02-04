@@ -2,7 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { getAccounts } from '../../redux/actions/AccountActions';
-import CreateAccountComponent from './CreateAccount';
+import CreateAccountComponent from '../CreateAccount/CreateAccount';
+import './Accounts.css';
 
 const AccountsComponent = (props) => {
 	const [display, setDisplay] = React.useState('none');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
 import { openAccount } from '../../redux/actions/AccountActions';
+import './CreateAccount.css';
 
 const CreateAccountComponent = (props) => {
 	const [accountType, setAccountType] = React.useState('Checking');

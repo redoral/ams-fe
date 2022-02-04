@@ -1,0 +1,111 @@
+.accounts-actions-container {
+	display: flex;
+	flex: 1;
+	height: 100%;
+}
+
+.go-back-btn {
+	font-weight: 700;
+	color: #999;
+	cursor: pointer;
+}
+
+.accounts-container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.account-view-body {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+
+.actions-container {
+	display: flex;
+	flex-direction: column;
+	flex: 0.4;
+	padding: 25px;
+	margin-top: 5px;
+}
+
+.recent-transactions {
+	flex: 1;
+}
+
+.action-box {
+	background-color: #efefef;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+	min-height: 200px;
+}
+
+.balance-input {
+	border: 0;
+	padding: 15px;
+	border-radius: 25px;
+	margin-bottom: 10px;
+	font-weight: 700;
+	color: #555;
+}
+
+.balance-input::placeholder {
+	color: #999;
+}
+
+.recent-transactions-text {
+	color: #555;
+	margin-top: 50px;
+}
+
+.recent-transactions-box {
+	background-color: #efefef;
+	border-radius: 25px;
+}
+
+.transaction-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 25px;
+	border-bottom: 1px solid #fff;
+}
+
+.transaction-balance-text {
+	font-weight: 700;
+	font-size: 22px;
+	color: #555;
+}
+
+.quick-actions-text {
+	color: #555;
+}
+
+.transaction-type-text,
+.transaction-balance-text {
+	padding: 0;
+	margin: 10px;
+}
+
+.transaction-type-text {
+	font-weight: 700;
+	color: #999;
+}
+
+.transaction-date-text {
+	color: #999;
+	font-weight: 700;
+}
+
+.input-label {
+	margin: 10px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #555;
+}
+
+.csv-download-btn {
+	text-decoration: none;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import AccountsComponent from '../Accounts/Accounts';
-import ViewAccountComponent from '../Accounts/ViewAccount';
+import ViewAccountComponent from '../ViewAccount/ViewAccount';
 
 const DashboardMainPageComponent = (props) => {
 	const [account, setAccount] = React.useState();

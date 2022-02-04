@@ -5,6 +5,7 @@ import {
 	createTransaction,
 	getTransactions,
 } from '../../redux/actions/TransactionActions';
+import './ViewAccount.css';
 import { CSVLink } from 'react-csv';
 import axios from 'axios';
 
@@ -34,7 +35,7 @@ const ViewAccountComponent = (props) => {
 						Go back
 					</span>
 					<h1 className='main-page-header'>
-						Account {props.account.account_number}
+						{props.account.account_type} account {props.account.account_number}
 					</h1>
 					<h1 className='main-page-subheader'>
 						${props.account.current_balance.toFixed(2)} current balance
