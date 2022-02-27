@@ -2,12 +2,14 @@ import React from 'react';
 import logo from '../../assets/logo.png';
 import { useDispatch } from 'react-redux';
 import { logOutUser } from '../../redux/actions/UserActions';
-import { FaDoorOpen } from 'react-icons/fa';
+import { FaSearch, FaDoorOpen, FaUserPlus } from 'react-icons/fa';
 import './ManagerDash.css';
+import DashboardMainPageComponent from '../../components/DashboardMainPage/DashboardMainPage';
 
 const ManagerDashScreen = () => {
 	const dispatch = useDispatch();
 	const currentUser = JSON.parse(sessionStorage.getItem('user'));
+	const [nav, setNav] = React.useState('searchAccount');
 
 	return (
 		<div className='dashboard-container'>
@@ -19,6 +21,28 @@ const ManagerDashScreen = () => {
 						<br />
 						{currentUser.customer.name} 👋
 					</h1>
+					<div className='sidebar-nav'>
+						<span
+							className={
+								nav === 'searchAccount'
+									? 'nav-item-active nav-item'
+									: 'nav-item'
+							}
+						>
+							<FaSearch className='nav-icon' />
+							Search account
+						</span>
+						<span
+							className={
+								nav === 'createAccount'
+									? 'nav-item-active nav-item'
+									: 'nav-item'
+							}
+						>
+							<FaUserPlus className='nav-icon' />
+							Create a new account
+						</span>
+					</div>
 				</div>
 				<div className='dashboard-bottom'>
 					<span
@@ -31,18 +55,7 @@ const ManagerDashScreen = () => {
 				</div>
 			</div>
 			<div className='dashboard-main-page'>
-				<h1 className='search-text'>Search for an account</h1>
-				<div className='search-bar'>
-					<form style={{ display: 'flex', flex: 1 }}>
-						<input
-							type='text'
-							className='search-bar-input'
-							placeholder='Account number'
-						/>
-						<input type='submit' className='search-btn' />
-					</form>
-				</div>
-				<div className='accounts-add-container'></div>
+				<DashboardMainPageComponent nav={nav} setNav={setNav} />
 			</div>
 		</div>
 	);

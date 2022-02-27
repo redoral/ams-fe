@@ -25,7 +25,9 @@ const DashboardScreen = () => {
 					<div className='sidebar-nav'>
 						<span
 							className={
-								nav === 'overview' ? 'nav-item-active nav-item' : 'nav-item'
+								nav === 'overview'
+									? 'nav-item-active nav-item'
+									: 'nav-item'
 							}
 						>
 							<FaCompass className='nav-icon' />
@@ -33,7 +35,9 @@ const DashboardScreen = () => {
 						</span>
 						<span
 							className={
-								nav === 'accounts' ? 'nav-item-active nav-item' : 'nav-item'
+								nav === 'accounts'
+									? 'nav-item-active nav-item'
+									: 'nav-item'
 							}
 						>
 							<FaRegUser className='nav-icon' />

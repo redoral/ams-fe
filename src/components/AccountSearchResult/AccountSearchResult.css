@@ -1,0 +1,48 @@
+.account-view-container {
+	padding: 25px;
+}
+
+.account-view-container-error {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+	overflow: hidden;
+}
+
+.customer-name {
+	color: #555;
+	margin: 0;
+	font-size: 48px;
+	margin-top: 25px;
+}
+
+.customer-address {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
+	color: #999;
+}
+
+.account-list-container {
+	margin-top: 50px;
+}
+
+.accounts-title {
+	color: #555;
+}
+
+.accounts-list-box {
+	background-color: #efefef;
+	display: flex;
+	border-radius: 25px;
+}
+
+.accounts-list-scroll {
+	overflow-y: scroll;
+	height: 500px;
+}
+
+.accounts-list-scroll::-webkit-scrollbar {
+	display: none;
+}
